@@ -1,0 +1,8 @@
+{
+  "name": "fftjs",
+  "src": "http://fftjs.monks.co/fft.min.js",
+  "version": "v0.0.2",
+  "shim": {
+    "exports": ["FFTJS"]
+  }
+}
