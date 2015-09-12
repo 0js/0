@@ -8,7 +8,7 @@ let libs = fs.readdirSync('./_j')
 for (let lib of libs) {
   let version = fs.readdirSync('./_j/' + lib)
   let json = require('./_j/' + lib + '/' + version)
-  paths[json.name] = json.src
+  paths[json.name] = json.src.substring(0, json.src.length - 3)
   if (json.shim) {
     shim[json.name] = {exports: json.shim.exports}
   }
