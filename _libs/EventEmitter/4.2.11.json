@@ -1,5 +1,4 @@
 {
   "name": "EventEmitter",
-  "src": "https://cdnjs.cloudflare.com/ajax/libs/EventEmitter/4.2.11/EventEmitter.min.js",
-  "version": "4.2.11"
+  "src": "https://cdnjs.cloudflare.com/ajax/libs/EventEmitter/4.2.11/EventEmitter.min.js"
 }

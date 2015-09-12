@@ -1,5 +1,4 @@
 {
   "name": "jquery",
-  "src": "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js",
-  "version": "2.1.4"
+  "src": "//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
 }

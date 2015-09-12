@@ -1,6 +1,5 @@
 {
   "name": "hbs",
   "src": "require-handlebars-plugin/hbs",
-  "local": true,
-  "version": "1.0.0"
+  "local": true
 }
