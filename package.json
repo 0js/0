@@ -1,0 +1,27 @@
+{
+  "name": "zero",
+  "version": "0.0.1",
+  "description": "async-stdlib for javascript",
+  "engines": {
+    "iojs": "3.3.x"
+  },
+  "dependencies": {
+    "request": "^2.61.0",
+    "request-promise": "^0.4.3",
+    "uglify-js": "^2.4.24"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node make.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0js/0.git"
+  },
+  "author": "Andrew Monks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/0js/0/issues"
+  },
+  "homepage": "https://github.com/0js/0#readme"
+}
