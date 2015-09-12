@@ -1,0 +1,7 @@
+{
+  "name": "three",
+  "src": "hhttps://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js",
+  "shim": {
+    "exports": "THREE"
+  }
+}
