@@ -2,6 +2,7 @@
 
 This project creates a stdlib of vendor code for (require.js) async javascript.
 
+[live demo](http://0.ss.cx/index.html)
 ```
 <script src="http://0.ss.cx/0.js"></script>
 <script>

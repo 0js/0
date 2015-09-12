@@ -35,16 +35,16 @@ gulp.task('zero', ['del'], function () {
 })
 
 gulp.task('m', ['zero'], function () {
-  return new Promise(function (resolve, reject) {
-    // let mirrors = require('./dist/mirrors.json')
-    // for (let mirror of mirrors) {
-    //   gulp.src(`./_mirrors/${mirror}/**/*`)
-    //   .pipe(gulp.dest(`./dist/${conf.mirrors}${mirror}/`))
-    // }
-    // resolve('done!')
-    gulp.src('./_mirrors/**/*')
-    .pipe(gulp.dest(`./dist/${conf.mirrors}`))
-  })
+  // return new Promise(function (resolve, reject) {
+  //   let mirrors = require('./dist/mirrors.json')
+  //   for (let mirror of mirrors) {
+  //     gulp.src(`./_mirrors/${mirror}/**/*`)
+  //     .pipe(gulp.dest(`./dist/${conf.mirrors}${mirror}/`))
+  //   }
+  //   resolve('done!')
+  // })
+  return gulp.src('./_mirrors/**/*')
+  .pipe(gulp.dest(`./dist/${conf.mirrors}`))
 })
 
 gulp.task('uglify', ['m', 'zero'], function () {
