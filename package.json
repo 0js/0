@@ -13,12 +13,10 @@
     "gulp-gzip": "^1.2.0",
     "gulp-s3": "^0.3.0",
     "gulp-uglify": "^1.4.1",
-    "ncp": "^2.0.0",
     "request": "^2.61.0",
     "request-promise": "^0.4.3",
     "uglify-js": "^2.4.24"
   },
-  "devDependencies": {},
   "scripts": {
     "make": "gulp",
     "dist": "gulp s3"
