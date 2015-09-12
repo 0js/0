@@ -1,4 +1,4 @@
-# 0: async-stdlib
+# 0: async-stdlib  [*latest: 0.0.1*](http://0.ss.cx/0.js)
 
 This project creates a stdlib of CDNed vendor code for (require.js) async javascript.
 
@@ -12,7 +12,7 @@ This project creates a stdlib of CDNed vendor code for (require.js) async javasc
 </script>
 ```
 
-## Versioning *latest: 0.0.1*
+## Versioning
 
 All libraries are updated once per week.
 
