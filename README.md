@@ -16,13 +16,13 @@ This project creates a stdlib of CDNed vendor code for (require.js) async javasc
 
 All libraries are updated once per week.
 
-If during that week a library made a breaking change (announced via semver major version), 0 will enter a new major version as well.
+If during that week a semver library makes a major version, or a non-semver library (boo) releases *any* version, 0 will bump to a new major version as well.
 
-Each major version of 0 will be kept updated with minor and patch releases of libraries.
+Each major version of 0 will be kept updated with minor and patch releases of semver libraries.
 
 The `latest` of each major version of 0 will be available at `http://0.ss.cx/[major-version].js`. The `latest` major version of 0 will be available at `http://0.ss.cx/0.js`.
 
-So, if `http://0.ss.cx/5.js` is the latest version of 0 when you included it, it *will* introduce patches and updates but it *will not* introduce breaking changes.
+So, if `http://0.ss.cx/5.js` is the latest version of 0 when you included it, it *will* introduce patches and upgrades but it *will not* introduce breaking changes.
 
 ## Adding Libraries
 
