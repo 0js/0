@@ -1,5 +1,7 @@
 'use strict'
 
+let conf = require('./config.json')
+
 let fs = require('fs')
 let request = require('request-promise')
 let uglify = require('uglify-js')
@@ -33,7 +35,7 @@ let build = function (r) {
   let compressor = uglify.Compressor()
   ast = ast.transform(compressor)
   out = ast.print_to_string()
-  fs.writeFileSync('gh-pages/0.js', out)
+  fs.writeFileSync(conf.dist + '/0.js', out)
 }
 
 request(r.src)

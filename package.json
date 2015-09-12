@@ -6,13 +6,16 @@
     "iojs": "3.3.x"
   },
   "dependencies": {
+    "aws-sdk": "^2.2.0",
+    "dotenv": "^1.2.0",
     "request": "^2.61.0",
     "request-promise": "^0.4.3",
     "uglify-js": "^2.4.24"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node make.js"
+    "make": "node make.js",
+    "dist": "node make.js; node dist.js"
   },
   "repository": {
     "type": "git",
