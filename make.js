@@ -2,15 +2,14 @@
 
 module.exports = function () {
   return new Promise(function (resolve, reject) {
-    let conf = require('./config.json')
+    let conf = require('./conf.json')
 
     let fs = require('fs')
     let request = require('request-promise')
     let r = require('./_libs/requirejs/2.21.0.json')
+    let mirrors = []
 
     let build = function (r) {
-      let mirrors = []
-
       let paths = {}
       let shim = {}
       let libs = fs.readdirSync('./_libs')
@@ -37,7 +36,8 @@ module.exports = function () {
         'paths': ${JSON.stringify(paths)},
         'shim': ${JSON.stringify(shim)}
       })`
-      return out
+
+      return {js: out, mirrors: mirrors}
     }
 
     request(r.src)

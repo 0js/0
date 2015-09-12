@@ -11,6 +11,7 @@ let gzip = require('gulp-gzip')
 let make = require('./make')
 let fs = require('fs')
 let s3 = require('gulp-s3')
+let conf = require('./conf.json')
 
 // tasks
 
@@ -21,23 +22,32 @@ gulp.task('del', function () {
   })
 })
 
-gulp.task('0', ['del'], function () {
+gulp.task('zero', ['del'], function () {
   return new Promise(function (resolve, reject) {
     make()
     .then(function (made) {
-      fs.writeFileSync('dist/0.js', made)
+      fs.writeFileSync('dist/0.js', made.js)
+      fs.writeFileSync('dist/mirrors.json', JSON.stringify(made.mirrors))
       resolve()
     })
     .catch(console.log)
   })
 })
 
-gulp.task('m', ['del'], function () {
-  return gulp.src('./_mirrors/**/*.*')
-  .pipe(gulp.dest('dist/m/'))
+gulp.task('m', ['zero'], function () {
+  return new Promise(function (resolve, reject) {
+    // let mirrors = require('./dist/mirrors.json')
+    // for (let mirror of mirrors) {
+    //   gulp.src(`./_mirrors/${mirror}/**/*`)
+    //   .pipe(gulp.dest(`./dist/${conf.mirrors}${mirror}/`))
+    // }
+    // resolve('done!')
+    gulp.src('./_mirrors/**/*')
+    .pipe(gulp.dest(`./dist/${conf.mirrors}`))
+  })
 })
 
-gulp.task('uglify', ['m', '0'], function () {
+gulp.task('uglify', ['m', 'zero'], function () {
   return gulp.src('./dist/**/*.js')
   .pipe(uglify())
   .pipe(gulp.dest('./dist/'))
