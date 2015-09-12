@@ -1,3 +1,5 @@
 {
-  "dist": "dist"
+  "dist": "dist",
+  "mirrors": "m/",
+  "url": "http://0.ss.cx/"
 }
