@@ -1,0 +1,5 @@
+{
+  "name": "JSXTransformer",
+  "local": true,
+  "src": "jsx-requirejs-plugin/js/jsx"
+}

@@ -1,3 +1,6 @@
 [submodule "_mirrors/require-handlebars-plugin"]
 	path = _mirrors/require-handlebars-plugin
 	url = https://github.com/SlexAxton/require-handlebars-plugin.git
+[submodule "_mirrors/jsx-requirejs-plugin"]
+	path = _mirrors/jsx-requirejs-plugin
+	url = git://github.com/philix/jsx-requirejs-plugin.git

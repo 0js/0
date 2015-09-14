@@ -8,7 +8,7 @@ let gulp = require('gulp')
 let del = require('del')
 let uglify = require('gulp-uglify')
 let gzip = require('gulp-gzip')
-let make = require('./make')
+let build = require('./build')
 let fs = require('fs')
 let s3 = require('gulp-s3')
 let conf = require('./conf.json')
@@ -24,10 +24,10 @@ gulp.task('del', function () {
 
 gulp.task('zero', ['del'], function () {
   return new Promise(function (resolve, reject) {
-    make()
-    .then(function (made) {
-      fs.writeFileSync('dist/0.js', made.js)
-      fs.writeFileSync('dist/mirrors.json', JSON.stringify(made.mirrors))
+    build()
+    .then(function (built) {
+      fs.writeFileSync('dist/0.js', built.zero)
+      fs.writeFileSync('dist/mirrors.json', JSON.stringify(built.mirrors))
       resolve()
     })
     .catch(console.log)
@@ -76,7 +76,7 @@ gulp.task('gzip-html', ['m', 'pub'], function () {
   .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('s3', ['gzip'], function () {
+gulp.task('s3', ['gzip-html', 'gzip-js', 'gzip-json'], function () {
   gulp.src(['./dist/**'])
   .pipe(s3(
     {
